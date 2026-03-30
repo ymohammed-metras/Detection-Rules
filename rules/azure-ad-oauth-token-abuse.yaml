@@ -1,0 +1,37 @@
+title: "Azure AD OAuth Token Abuse"
+id: "rule-azure-ad-oauth-token-abuse"
+status: draft
+description: |
+  Detects suspicious OAuth token usage patterns including impossible travel and token replay attacks against Azure AD identities.
+author: "Detection Engineer"
+date: 2026/03/30
+modified: 2026/03/30
+version: 1.0.0
+
+tags:
+  - attack.initial_access
+  - attack.lateral_movement
+  - attack.t1078.004
+  - attack.t1550.001
+  - azure-ad
+  - oauth-abuse
+  - cloud-identity
+  - lateral-movement
+
+logsource:
+  product: azure
+  service: azureactivedirectory
+
+detection:
+  selection:
+    # Add detection conditions here
+    # Field|contains: 'suspicious_value'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative activity
+  - Authorized security tooling
+
+level: high
+severity: high
+enabled: true
