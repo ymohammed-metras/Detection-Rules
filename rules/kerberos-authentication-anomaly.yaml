@@ -1,0 +1,36 @@
+title: "Kerberos Authentication Anomaly"
+id: "ndr-ueba-019"
+status: active
+description: |
+  Detects unusual Kerberos authentication patterns that may indicate Kerberoasting or ticket attacks.
+author: "NDR UEBA Team"
+date: 2026/03/30
+modified: 2026/03/30
+version: 1.0.0
+
+tags:
+  - attack.credential_access
+  - attack.t1558.003
+  - ueba
+  - behavioral
+  - kerberos
+  - kerberoasting
+  - ndr
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    # Add detection conditions here
+    # Field|contains: 'suspicious_value'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative activity
+  - Authorized security tooling
+
+level: high
+severity: high
+enabled: true
