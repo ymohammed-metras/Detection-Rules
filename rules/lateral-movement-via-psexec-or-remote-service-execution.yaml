@@ -1,0 +1,40 @@
+title: "Lateral Movement via PsExec or Remote Service Execution"
+id: "3074ddd5-9bcd-4b41-b63b-5850c938dcc0"
+status: draft
+description: |
+  Detects adversary lateral movement using PsExec, WMI, or remote service execution to propagate through the network. Identifies remote process creation over named pipes or administrative shares (ADMIN$, C$, IPC$).
+author: "Detection Engineer"
+date: 2026/04/01
+modified: 2026/04/01
+version: 1.0.0
+
+tags:
+  - attack.lateral_movement
+  - attack.t1021
+  - attack.t1021.002
+  - attack.t1570
+  - attack.t1047
+  - lateral-movement
+  - psexec
+  - wmi
+  - windows
+  - smb
+  - admin-share
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    # Add detection conditions here
+    # Field|contains: 'suspicious_value'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative activity
+  - Authorized security tooling
+
+level: high
+severity: high
+enabled: true
