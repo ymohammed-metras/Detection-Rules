@@ -1,5 +1,5 @@
 title: "Lateral Movement via PsExec or Remote Service Execution"
-id: "rule-lateral-movement-via-psexec-or-remote-service-execution"
+id: "3074ddd5-9bcd-4b41-b63b-5850c938dcc0"
 status: draft
 description: |
   Detects adversary lateral movement using PsExec, WMI, or remote service execution to propagate through the network. Identifies remote process creation over named pipes or administrative shares (ADMIN$, C$, IPC$).
