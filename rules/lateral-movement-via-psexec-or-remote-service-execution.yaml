@@ -4,8 +4,8 @@ status: draft
 description: |
   Detects adversary lateral movement using PsExec, WMI, or remote service execution to propagate through the network. Identifies remote process creation over named pipes or administrative shares (ADMIN$, C$, IPC$).
 author: "Detection Engineer"
-date: 2026/04/01
-modified: 2026/04/01
+date: 2026/04/02
+modified: 2026/04/02
 version: 1.0.0
 
 tags:
