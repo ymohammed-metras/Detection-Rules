@@ -1,0 +1,35 @@
+title: "Suspicious Please Activity Detection"
+id: "fcbc4e01-6f8b-4ad1-b8f3-fc871bb3894d"
+status: draft
+description: |
+  Detects please create a rule for apt 35. Generated from natural language description — review and refine detection logic before production deployment.
+author: "Detection Engineer"
+date: 2026/04/09
+modified: 2026/04/09
+version: 1.0.0
+
+tags:
+  - attack.discovery
+  - attack.t1082
+  - custom
+  - behavioral
+  - review-required
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    entityField: 'user_account'
+    behavioralType: 'user'
+    learningPeriod: '30d'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative activity
+  - Authorized security tooling
+
+level: medium
+severity: medium
+enabled: true
